@@ -1,0 +1,21 @@
+.navigation{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigation a, .navigation a:hover, .navigation a:focus{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#FFF;
+    padding: 0 0 2px 0;
+    margin: 0 10px;
+}
+
+.navigation a:active, .navigation a:target{
+    color:#FFF;
+    text-decoration: none;
+    padding: 0 0 2px 0;
+    border-bottom: 1px solid #FFF;
+}
