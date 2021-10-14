@@ -1,0 +1,25 @@
+.success-form{
+    height: 400px;
+}
+
+.progress{
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+.rs-progress-line-bg{
+    background-color: #A09F6A;
+}
+
+.success-message > p{
+    padding: 10px 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.success-message p:first-child{
+    margin-top: 80px;
+}
+
+.success-message p:last-child{
+    margin-bottom: 80px;
+}
