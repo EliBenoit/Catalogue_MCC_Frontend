@@ -1,0 +1,38 @@
+.container{
+  display: grid;
+  grid-template-rows: [header] 60px [content] 1fr [footer] 60px [end];
+}
+
+header{
+    background: #40261C;
+    height: 60px;
+    width: 100%;
+    padding: 20px;
+    
+    grid-row-start: 'header';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: auto;
+    height: 40px;
+}
+
+main{
+    grid-row-start: 'content';
+    height: 85vh;
+    margin: 0 auto;
+}
+
+footer{
+    grid-row-start: 'footer';
+    text-align:center;
+}
+footer > p {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
