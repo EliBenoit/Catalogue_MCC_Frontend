@@ -1,0 +1,55 @@
+.loginForm{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 400px;
+}
+
+.loginForm .rs-input{
+    width: 400px;
+}
+
+.rs-input:hover, .rs-input:focus, .rs-input:hover:not(:disabled), .rs-input:active{
+    border-color: #40261C;
+    box-shadow: 0 0 0 3px #40261C50;
+}
+
+.rs-divider{
+    background-color: #40261C;
+}
+
+.rs-divider-horizontal{
+    height: 0.5px;
+}
+
+.rs-btn-primary{
+    width: 200px;
+    background: #40261C;
+}
+
+.rs-btn-primary:hover{
+    background: #B38861;
+    color:#000;
+}
+
+.loginButton{
+    width: 300px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.loginForm .rs-btn{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrappedTooltip{
+    display: flex;
+}
+
+.registerSwitch{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
