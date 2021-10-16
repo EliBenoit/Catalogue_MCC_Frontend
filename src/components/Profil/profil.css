@@ -1,0 +1,12 @@
+.title-section{
+    font-size: 1.2;
+}
+
+.book-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-list .cancel{
+    margin: 5px 0;
+}
