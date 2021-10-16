@@ -9,7 +9,9 @@ import {
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
-/*import Profil from './Profil';
+import Profil from './components/Profil';
+import Dashboard from "./components/Dashboard";
+/*
 import PrivateRoute from "./PrivateRoute/PrivateRoute";*/
 
 // style
@@ -32,9 +34,15 @@ const App = () => {
      <Route path="/connexion">
         <Login />
       </Route>
-          <Route path="/inscription">
-            <Register />
-          </Route>
+      <Route path="/inscription">
+        <Register />
+      </Route>
+      <Route path="/mon-compte">
+        <Profil />
+      </Route>
+      <Route path="/tableau-de-bord">
+        <Dashboard />
+      </Route>
       <Route path="/">
           <Home />
       </Route>

@@ -32,12 +32,12 @@
     height: 0.5px;
 }
 
-.rs-btn-primary{
+.form .rs-btn-primary{
     width: 200px;
     background: #40261C;
 }
 
-.rs-btn-primary:hover, .rs-btn-primary:active, .rs-btn-primary:focus{
+.form .rs-btn-primary:hover, .rs-btn-primary:active, .rs-btn-primary:focus{
     background: #B38861;
     color:#000;
 }

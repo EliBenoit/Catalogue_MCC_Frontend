@@ -27,7 +27,7 @@ main{
 }
 
 .connected{
-    max-width: 1000;
+    width: 1000px;
     height: auto;
     margin: 60px auto;
 }

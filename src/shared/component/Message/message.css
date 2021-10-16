@@ -1,8 +1,9 @@
 .wrapper{
     width: max-content;
     border-radius: 5px;
-    padding:2px 6px;
+    padding: 2px 6px;
     background: #D6CECE;
+    height: 20px;
 }
 
 .error{

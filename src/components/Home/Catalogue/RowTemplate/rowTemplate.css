@@ -9,6 +9,7 @@
     width: auto;
     height: 150px;
 }
+
 .informations{
     grid-column-start: 'informations';
     width:250px;
