@@ -5,12 +5,12 @@ import React from "react";
 import Navigation from '../../Navigation';
 
 // style
-import './DisconnectedTemplate.css';
+import './Template.css';
 
 // assets
 import logo from '../../../../assets/logo-mcc-white.svg'
 
-const DisconnectedTemplate = ({children}) => {
+const Template = ({type, children}) => {
     return (
     <div className="container">
       <header>
@@ -19,7 +19,7 @@ const DisconnectedTemplate = ({children}) => {
           </div>
           <Navigation />
       </header>
-      <main>{children}</main>
+      <main className={`${type}`}>{children}</main>
       <footer>
           <p>Médiathèque La Chapelle-Curreaux</p>
       </footer>
@@ -27,4 +27,4 @@ const DisconnectedTemplate = ({children}) => {
     )
 }
 
-export default DisconnectedTemplate;
+export default Template;

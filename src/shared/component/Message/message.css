@@ -1,0 +1,25 @@
+.wrapper{
+    width: max-content;
+    border-radius: 5px;
+    padding:2px 6px;
+    background: #D6CECE;
+}
+
+.error{
+    background: #C95A5A;
+}
+
+.success{
+    background: #74C95A;
+}
+
+.warning{
+    background: #E0AE09;
+}
+
+.content{
+    font-size: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+    color:#000000;
+}

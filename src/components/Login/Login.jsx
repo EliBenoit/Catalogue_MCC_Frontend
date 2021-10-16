@@ -3,7 +3,7 @@ import React from "react";
 import {  useHistory  } from "react-router";
 
 // component
-import DisconnectedTemplate from "../../shared/component/Template/DisconnectedTemplate/DisconnectedTemplate";
+import Template from "../../shared/component/Template/Template";
 import { Form, Button, Divider } from 'rsuite';
 
 // style
@@ -19,7 +19,7 @@ const Login = () => {
     }
 
     return (
-    <DisconnectedTemplate>
+    <Template>
         <div className="form">
             <Form>
                 <Form.Group controlId="email">
@@ -43,7 +43,7 @@ const Login = () => {
                 <Button  appearance="primary" onClick={redirect}>S'enregistrer</Button>
             </div>
         </div>
-    </DisconnectedTemplate>
+    </Template>
     )
 }
 

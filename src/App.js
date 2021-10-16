@@ -8,8 +8,8 @@ import {
 // component
 import Login from './components/Login';
 import Register from './components/Register';
-/*import Home from './Home';
-import Profil from './Profil';
+import Home from './components/Home';
+/*import Profil from './Profil';
 import PrivateRoute from "./PrivateRoute/PrivateRoute";*/
 
 // style
@@ -29,12 +29,15 @@ const App = () => {
     <Router>
     <div className="App">
       <Switch>
-          <Route path="/connexion">
-            <Login />
-          </Route>
+     <Route path="/connexion">
+        <Login />
+      </Route>
           <Route path="/inscription">
             <Register />
           </Route>
+      <Route path="/">
+          <Home />
+      </Route>
       </Switch>
     </div>
     </Router>

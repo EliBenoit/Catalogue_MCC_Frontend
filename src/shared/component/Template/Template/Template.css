@@ -26,6 +26,12 @@ main{
     margin: 0 auto;
 }
 
+.connected{
+    max-width: 1000;
+    height: auto;
+    margin: 60px auto;
+}
+
 footer{
     grid-row-start: 'footer';
     text-align:center;

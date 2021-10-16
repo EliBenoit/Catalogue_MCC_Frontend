@@ -1,0 +1,21 @@
+.wrapper-catalogue{
+    width: 60vw;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+}
+
+#search{
+    width:70%;
+}
+
+#filter{
+    width: 100%;
+}
+
+.empty{
+    width:100%;
+    text-align: center;
+}

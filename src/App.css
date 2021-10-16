@@ -5,8 +5,10 @@
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
  -moz-box-sizing: border-box;
+
+ font-size: 18px;
 }
 
 body{
-  background: #F8D8B0;
+  color: #40261C;
 }
