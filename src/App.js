@@ -17,6 +17,21 @@ import {Toaster } from "react-hot-toast";
 // style
 import 'rsuite/styles/index.less';
 
+/**
+ * 
+ * To connect with the API we need to use an async function, with a fetch() method 
+ * with then step to execute instruction in order. 
+ * 
+ * The fetch method have option to precise a header informations,
+ * where i can put method to use and headers. 
+ * 
+ * We need to use a try/catch method() around the promise to handle the error situation.  * 
+ * 
+ * Since I use react, I need to make this call inside a useEffect 
+ * to render the component when the fetch method is completed. 
+ * 
+ * */
+
 const App = () => {
   return (
     <>
