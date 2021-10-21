@@ -72,10 +72,10 @@ const Login = () => {
                 />
                 </div>
                 <div className="input-label">
-                <label htmlFor="passeword" >Mot de passe</label>
+                <label htmlFor="password" >Mot de passe</label>
                 <InputForm 
-                 name="passeword"
-                 type="passeword"
+                 name="password"
+                 type="password"
                  placeholder="Saisissez votre mot de passe"
                  form={form}
                  registerOptions={{
