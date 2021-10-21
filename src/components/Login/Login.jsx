@@ -2,6 +2,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import {  useHistory  } from "react-router";
+import { useDispatch } from 'react-redux';
+
+// actions
+import { loggedIn } from '../../Reducers/userReducer.js';
 
 // component
 import Template from "../../shared/component/Template/Template";
@@ -16,7 +20,8 @@ import '../../shared/style/formStyle.css';
 import fakeUser from '../../assets/fakeData/fakeUser.json'
 
 const Login = () => {
-    const form = useForm()
+    const form = useForm();
+    const dispatch = useDispatch();
     const history = useHistory();
 
     function redirect(){
@@ -25,7 +30,26 @@ const Login = () => {
     }
 
     function onSubmit(data){
-        
+        /**
+         * 
+         * If back function naromaly, we need to call API authentification with the data props. 
+         * Data props is an object with email and passeword information. 
+         * If back respond with a valid token, we stock it in local storage the token to keep it in header request. 
+         * After, we push the user profil inside the store to keep the information. 
+         * 
+         * Here I just push a fake user data. 
+         * To test different option, you can change employee to reader inside the role propriety,
+         * and you will be able to see the reader pages. 
+         * 
+         *  */ 
+      dispatch({
+            type: `${loggedIn}`,
+            payload: { profile: fakeUser },
+          });
+
+          const path = `/`;
+          history.push(path);
+  
     }
 
     return (
