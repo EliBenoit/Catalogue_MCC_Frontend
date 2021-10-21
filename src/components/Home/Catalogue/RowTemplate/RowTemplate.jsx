@@ -23,6 +23,13 @@ const RowTemplate = ({bookData}) => {
     const messageContent = data.isBooked ? "Emprunté" : "Disponible";
     const kind = data.kind
     
+    /**
+     * 
+     * Here I use a fake cover stock inside assets. But when we get data from back, we will have a string. 
+     * So to shown the cover, we need to use URL.createObjectURL(prop).
+     * The prop can be a file, blob, or MediaSource object. And it will return a DOMString containing an object URL.
+     * 
+     */
     return (
         <div className="row">
             <img src={fakeCover} className="cover" alt={`Couverture de ${data.title}`}/>
