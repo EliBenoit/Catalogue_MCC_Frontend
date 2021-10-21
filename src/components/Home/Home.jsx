@@ -11,12 +11,10 @@ import book from '../../assets/book.svg';
 // style
 import "rsuite/dist/rsuite.min.css";
 import "../../shared/style/sectionHeader.css";
-import { Button } from "rsuite";
 
 // data
 
 const Home = () => {
-    const userRole = "employee"
     return (
     <>
     <Template type="connected">
@@ -25,9 +23,6 @@ const Home = () => {
                 <img src={book} className="header-image" alt="Illustration titre" />
                 <h1>Catalogue</h1>
             </div>
-            {userRole === "employee" && (
-            <Button appearance="primary">Ajouter un livre</Button>
-            )} 
         </section>
         <section className="section-catalogue">
             <Catalogue/>
