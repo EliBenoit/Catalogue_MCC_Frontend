@@ -11,20 +11,10 @@ import Register from './components/Register';
 import Home from './components/Home';
 import Profil from './components/Profil';
 import Dashboard from "./components/Dashboard";
-/*
-import PrivateRoute from "./PrivateRoute/PrivateRoute";*/
+import PrivateRoute from "./components/PrivateRoute";
 
 // style
 import 'rsuite/styles/index.less';
-
-/*
-          <PrivateRoute path="/">
-            <Home />
-          </PrivateRoute>
-          <PrivateRoute path="/mon-compte">
-            <Profil />
-          </PrivateRoute>
-          */
 
 const App = () => {
   return (
@@ -37,15 +27,15 @@ const App = () => {
       <Route path="/inscription">
         <Register />
       </Route>
-      <Route path="/mon-compte">
+      <PrivateRoute path="/mon-compte">
         <Profil />
-      </Route>
-      <Route path="/tableau-de-bord">
+      </PrivateRoute>
+      <PrivateRoute admin path="/tableau-de-bord">
         <Dashboard />
-      </Route>
-      <Route path="/">
+      </PrivateRoute>
+      <PrivateRoute path="/">
           <Home />
-      </Route>
+      </PrivateRoute>
       </Switch>
     </div>
     </Router>

@@ -49,7 +49,6 @@ const Login = () => {
 
           const path = `/`;
           history.push(path);
-  
     }
 
     return (
