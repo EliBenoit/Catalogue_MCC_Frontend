@@ -1,5 +1,6 @@
 // package
 import React from "react";
+import { useSelector } from 'react-redux';
 
 // component
 import Message from '../../../../shared/component/Message';
@@ -16,13 +17,15 @@ import fakeCover from '../../../../assets/fakebook.jpg'
 import { Button } from "rsuite";
 
 const RowTemplate = ({bookData}) => {
-    const isConnected = true;
+    const isConnected = useSelector((state) => state.user.isConnected);
+    const isValidate = useSelector((state) => state.user.isValidate);
+
     const data = bookData;
     const isBooked = data.isBooked && "booked";
     const messageType = data.isBooked ? "error" : "success";
     const messageContent = data.isBooked ? "Emprunté" : "Disponible";
     const kind = data.kind
-    
+
     /**
      * 
      * Here I use a fake cover stock inside assets. But when we get data from back, we will have a string. 
@@ -44,7 +47,7 @@ const RowTemplate = ({bookData}) => {
             </div>
             <div className="description">
                 <p>{data.description}</p>
-                { isConnected && (
+                { (isConnected && isValidate) && (
                 <div className="toBook">
                     <img className={isBooked} src={toBook} alt="Emprunter un livre" />
                     <Button className="bookButton" appearance="primary" disabled={data.isBooked}>Emprunter</Button>

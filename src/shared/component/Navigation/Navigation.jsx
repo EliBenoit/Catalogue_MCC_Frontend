@@ -13,6 +13,8 @@ const Navigation = () => {
     const dispatch = useDispatch();
 
     const isConnected = useSelector((state) => state.user.isConnected);
+    const isValidate = useSelector((state) => state.user.isValidate);
+
     const role = useSelector((state) => state.user.role);
 
     function logOut(){
@@ -27,16 +29,16 @@ const Navigation = () => {
     return(
     <div className='navigation'>
         <Link to='/'>Catalogue</Link>
-        { (isConnected && (role === "employee")) && (
+        { (isConnected && (role === "employee") && isValidate) && (
                  <Link to='/tableau-de-bord'>Tableau de bord</Link>
         )}
-       { isConnected && (
+       { (isConnected && isValidate) && (
             <>
                 <Link to='/mon-compte'>Mon compte</Link>
                 <Link to='/' onClick={logOut}>Déconnexion</Link>
             </>
         )}
-        {!isConnected && (<Link to='/connexion'>Connexion</Link>)}
+        {(!isConnected || !isValidate) && (<Link to='/connexion'>Connexion</Link>)}
     </div>
     )
 }

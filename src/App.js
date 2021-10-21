@@ -36,9 +36,9 @@ const App = () => {
       <PrivateRoute admin path="/tableau-de-bord">
         <Dashboard />
       </PrivateRoute>
-      <PrivateRoute path="/">
+      <Route path="/">
           <Home />
-      </PrivateRoute>
+      </Route>
       </Switch>
     </div>
     </Router>

@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import {  useHistory  } from "react-router";
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-hot-toast';
 
 // actions
 import { loggedIn } from '../../Reducers/userReducer.js';
@@ -49,6 +50,10 @@ const Login = () => {
 
           const path = `/`;
           history.push(path);
+
+          if(!fakeUser.isValidate){
+            toast.error('Votre compte n\est pas encore validé. Vous ne pouvez pas vous connecter')
+          }
     }
 
     return (

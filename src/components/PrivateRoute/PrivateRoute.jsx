@@ -6,6 +6,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const PrivateRoute = ({ children, path, admin }) => {
   const isConnected = useSelector((state) => state.user.isConnected);
+  const isValidate = useSelector((state) => state.user.isValidate);
   const role = useSelector((state) => state.user.role);
   
   /**
@@ -42,7 +43,7 @@ const PrivateRoute = ({ children, path, admin }) => {
       path={path}
       render={
         ({ location }) => (
-          isConnected
+          (isConnected && isValidate)
             ? children
             : (
               <Redirect
