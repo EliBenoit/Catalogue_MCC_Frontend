@@ -21,8 +21,7 @@ const RowTemplate = ({bookData}) => {
     const isBooked = data.isBooked && "booked";
     const messageType = data.isBooked ? "error" : "success";
     const messageContent = data.isBooked ? "Emprunté" : "Disponible";
-
-    const kindContent = data.kind.map((ki, index) => (<Message content={ki} key={index}/>))
+    const kind = data.kind
     
     return (
         <div className="row">
@@ -34,7 +33,7 @@ const RowTemplate = ({bookData}) => {
                 </div>
                 <div className="author">{data.author}</div>
                 <div className="parutionDate">{data.parutionDate}</div>
-                <div className="kind">{kindContent}</div>
+                <div className="kind"><Message content={kind} /></div>
             </div>
             <div className="description">
                 <p>{data.description}</p>

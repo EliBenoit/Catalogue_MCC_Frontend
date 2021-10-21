@@ -10,7 +10,7 @@ import "rsuite/dist/rsuite.min.css";
 import "./catalogue.css"
 
 // data
-import fakeData from '../../../assets/fakeData.json';
+import fakeData from '../../../assets/fakeData/fakeData.json';
 
 const kindType =[
     {

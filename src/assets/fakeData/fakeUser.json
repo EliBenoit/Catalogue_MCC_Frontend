@@ -1,0 +1,18 @@
+[
+    {
+      "id": 0,
+      "firstName": "Eli",
+      "lastName": "Vercollier",
+      "email": "email@test.com",
+      "passeword": "rootroot",
+      "birthDate": "2021-10-20T18:28:01.251Z",
+      "role": "employee",
+      "adress": "string",
+      "postalCode": "string",
+      "city": "string",
+      "bookingId": [
+        ""
+      ],
+      "isValidate": true
+    }
+  ]
