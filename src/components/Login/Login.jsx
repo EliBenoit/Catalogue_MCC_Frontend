@@ -1,16 +1,22 @@
 // package
 import React from "react";
+import { useForm } from "react-hook-form";
 import {  useHistory  } from "react-router";
 
 // component
 import Template from "../../shared/component/Template/Template";
-import { Form, Button, Divider } from 'rsuite';
+import InputForm from "../../shared/component/InputForm";
+import { Button, Divider } from 'rsuite';
 
 // style
 import "rsuite/dist/rsuite.min.css";
 import '../../shared/style/formStyle.css';
 
+// fakeData
+import fakeUser from '../../assets/fakeData/fakeUser.json'
+
 const Login = () => {
+    const form = useForm()
     const history = useHistory();
 
     function redirect(){
@@ -18,25 +24,43 @@ const Login = () => {
         history.push(path);
     }
 
+    function onSubmit(data){
+        
+    }
+
     return (
     <Template>
-        <div className="form">
-            <Form>
-                <Form.Group controlId="email">
-                    <Form.ControlLabel>Identifiant</Form.ControlLabel>
-                    <div className="wrapped-tooltip">
-                        <Form.Control name="email" type="email" />
-                        <Form.HelpText tooltip>Votre adresse mail</Form.HelpText>
-                    </div>
-                </Form.Group>
-                <Form.Group controlId="password" >
-                    <Form.ControlLabel>Mot de passe</Form.ControlLabel>
-                    <Form.Control name="password" type="password" autoComplete="off" />
-                </Form.Group>
-                <Form.Group>
-                    <Button appearance="primary" className="button">Se connecter</Button>
-                </Form.Group>
-            </Form>
+        <div className="form-wrapper">
+            <form className="form" onSubmit={form.handleSubmit(onSubmit)}>
+             <div className="input-label">
+             <label htmlFor="email" >Adresse email</label>
+                <InputForm 
+                 name="email"
+                 type="email"
+                 placeholder="Saisissez votre adresse e-mail"
+                 form={form}
+                 registerOptions={{
+                   required: 'L\'adresse e-mail est requise.',
+                   pattern: {
+                     value: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm,
+                     message: 'Veuillez saisir une adresse e-mail valide.',
+                   },
+                 }}
+                />
+                </div>
+                <div className="input-label">
+                <label htmlFor="passeword" >Mot de passe</label>
+                <InputForm 
+                 name="passeword"
+                 type="passeword"
+                 placeholder="Saisissez votre mot de passe"
+                 form={form}
+                 registerOptions={{
+                   required: 'Le mot de passe est requise.'}}
+                />
+                </div>
+         <Button  appearance="primary" type="submit">Se connecter</Button>
+            </form>
             <Divider/>
             <div className="switch">
                 <p>Pas encore de compte ?</p>

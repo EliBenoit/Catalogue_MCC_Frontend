@@ -2,56 +2,85 @@
 import React from "react";
 
 // component
-import { Progress, Form, Button, Divider } from "rsuite";
+import InputForm from "../../../shared/component/InputForm";
 
 // style
 import "rsuite/dist/rsuite.min.css";
 import '../../../shared/style/formStyle.css';
 import '../Register.css';
 
-const Step1 = ({next, redirect}) => {
+const Step1 = ({form}) => {
     return (
-    <div className="form">
-        <Progress.Line percent={30} status="active" showInfo={false} className="progress"/>
-        <Form>
-                <div className="input-inline">
-                    <Form.Group controlId="lastName">
-                        <Form.ControlLabel>Nom</Form.ControlLabel>
-                        <Form.Control name="lastName" type="text" />
-                    </Form.Group>
-                    <Form.Group controlId="firstName" >
-                        <Form.ControlLabel>Prénom</Form.ControlLabel>
-                        <Form.Control name="firstName" type="text" autoComplete="off" />
-                    </Form.Group>
+    <>
+                <div className="input-label">
+                <label htmlFor="nom" >Nom</label>
+                <InputForm 
+                 name="nom"
+                 type="text"
+                 placeholder="Saisissez votre nom"
+                 form={form}
+                 registerOptions={{
+                   required: 'Le nom est requis.',
+                 }}
+                />
                 </div>
-                <Form.Group controlId="birthDate">
-                    <Form.ControlLabel>Date de naissance</Form.ControlLabel>
-                    <Form.Control name="birthDate" type="date" />
-                </Form.Group>
-                <Form.Group controlId="adress" >
-                    <Form.ControlLabel>Adresse postal</Form.ControlLabel>
-                    <Form.Control name="adress" type="text" autoComplete="off" />
-                </Form.Group>
-                <div className="input-inline">
-                    <Form.Group controlId="postalCode">
-                        <Form.ControlLabel>Code Postal</Form.ControlLabel>
-                        <Form.Control name="postalCode" type="text" />
-                    </Form.Group>
-                    <Form.Group controlId="city" >
-                        <Form.ControlLabel>Ville</Form.ControlLabel>
-                        <Form.Control name="city" type="text" autoComplete="off" />
-                    </Form.Group>
+                <div className="input-label">
+                <label htmlFor="prenom" >Prénom</label>
+                <InputForm 
+                 name="prenom"
+                 type="text"
+                 placeholder="Saisissez votre prénom"
+                 form={form}
+                 registerOptions={{
+                   required: 'Le prénom est requis.'}}
+                />
                 </div>
-                <Form.Group>
-                    <Button appearance="primary" className="button" onClick={next}>Suivant</Button>
-                </Form.Group>
-            </Form>
-            <Divider/>
-            <div className="switch">
-                <p>Déjà un compte ?</p>
-                <Button  appearance="primary" onClick={redirect}>Se connecter</Button>
-            </div>
-    </div>
+                <div className="input-label">
+                <label htmlFor="birthdate" >Date de naissance</label>
+                <InputForm 
+                 name="birthdate"
+                 type="date"
+                 placeholder="Saisissez votre date de naissance"
+                 form={form}
+                 registerOptions={{
+                   required: 'La date de naissance est requise.'}}
+                />
+                </div>
+                <div className="input-label">
+                <label htmlFor="adress" >Adresse</label>
+                <InputForm 
+                 name="adress"
+                 type="text"
+                 placeholder="Saisissez votre adresse postale"
+                 form={form}
+                 registerOptions={{
+                   required: 'Votre adresse est requise.'}}
+                />
+                </div>
+                <div className="input-label">
+                <label htmlFor="postalCode" >Code postal</label>
+                <InputForm 
+                 name="postalCode"
+                 type="text"
+                 placeholder="Saisissez votre code postale"
+                 form={form}
+                 registerOptions={{
+                   required: 'Le code postal est requis.',
+                 }}
+                />
+                </div>
+                <div className="input-label">
+                <label htmlFor="city" >Ville</label>
+                <InputForm 
+                 name="city"
+                 type="text"
+                 placeholder="Saisissez votre ville"
+                 form={form}
+                 registerOptions={{
+                   required: 'La ville est requise.'}}
+                />
+                </div>
+    </>
     )
 }
 

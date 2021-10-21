@@ -1,4 +1,4 @@
-.form{
+.form-wrapper{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -6,7 +6,35 @@
     width: 400px;
 }
 
-.form .rs-input{
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.input-label label{
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #40261C;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.input-label input {
+    width: 300px;
+    height:30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 1px #40261C;
+}
+
+.form-wrapper .rs-input{
     width: 400px;
 }
 
@@ -32,12 +60,12 @@
     height: 0.5px;
 }
 
-.form .rs-btn-primary{
+.form-wrapper .rs-btn-primary{
     width: 200px;
     background: #40261C;
 }
 
-.form .rs-btn-primary:hover, .rs-btn-primary:active, .rs-btn-primary:focus{
+.form-wrapper .rs-btn-primary:hover, .rs-btn-primary:active, .rs-btn-primary:focus{
     background: #B38861;
     color:#000;
 }
@@ -59,7 +87,7 @@
     transform: translateX(0);
 }
 
-.form .rs-btn{
+.form-wrapper .rs-btn{
     text-align: center;
     text-transform: uppercase;
 }
