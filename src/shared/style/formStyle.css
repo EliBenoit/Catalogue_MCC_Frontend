@@ -34,6 +34,10 @@
     border: solid 1px #40261C;
 }
 
+.input-label .file {
+    border: none;
+}
+
 .form-wrapper .rs-input{
     width: 400px;
 }

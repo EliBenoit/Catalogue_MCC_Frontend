@@ -12,12 +12,15 @@ import Home from './components/Home';
 import Profil from './components/Profil';
 import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
+import {Toaster } from "react-hot-toast";
 
 // style
 import 'rsuite/styles/index.less';
 
 const App = () => {
   return (
+    <>
+    <div><Toaster/></div>
     <Router>
     <div className="App">
       <Switch>
@@ -39,6 +42,7 @@ const App = () => {
       </Switch>
     </div>
     </Router>
+    </>
   );
 }
 
