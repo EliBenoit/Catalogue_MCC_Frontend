@@ -14,23 +14,30 @@ const Step2 = ({form}) => {
     return (
     <>
        <div className="input-label">
-       <label htmlFor="passeword" >Mot de passe</label>
+       <label htmlFor="password" >Mot de passe</label>
                 <InputForm 
-                 name="passeword"
-                 type="passeword"
+                 name="password"
+                 type="password"
                  placeholder="Saisissez votre mot de passe"
                  form={form}
                  registerOptions={{
                    required: 'Le mot de passe est requise.'}}
                 />
-                <label htmlFor="confirmPasseword" >Confirmer le mot de passe</label>
+                <label htmlFor="confirmPassword" >Confirmer le mot de passe</label>
                 <InputForm 
-                 name="confirmPasseword"
-                 type="passeword"
-                 placeholder="Saisissez votre mot de passe"
+                 name="confirmPassword"
+                 type="password"
+                 placeholder="Saisissez votre mot de passe à nouveau"
                  form={form}
                  registerOptions={{
-                   required: 'Le mot de passe est requise.'}}
+                   required: 'La confirmation du mot de passe est requise.',
+                   validate: (value) => {
+                    if (value === form.getValues('password')) {
+                      return true;
+                    }
+                    return 'Les mots de passe ne correspondent pas.';
+                  },
+                  }}
                 />
         </div>
     </>
