@@ -52,7 +52,7 @@ const Login = () => {
           history.push(path);
 
           if(!fakeUser.isValidate){
-            toast.error('Votre compte n\est pas encore validé. Vous ne pouvez pas vous connecter')
+            toast.error('Votre compte n\'est pas encore validé. Vous ne pouvez pas vous connecter')
           }
     }
 
