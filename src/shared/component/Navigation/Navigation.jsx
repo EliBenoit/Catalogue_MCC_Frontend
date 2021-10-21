@@ -6,9 +6,6 @@ import { useSelector, useDispatch } from 'react-redux';
 // actions
 import { loggedOut } from '../../../Reducers/userReducer';
 
-
-// component
-
 // style
 import './Navigation.css';
 
@@ -16,9 +13,14 @@ const Navigation = () => {
     const dispatch = useDispatch();
 
     const isConnected = useSelector((state) => state.user.isConnected);
-    const role = null
+    const role = useSelector((state) => state.user.role);
 
     function logOut(){
+        /**
+         * 
+         * When logout, we need to clean token inside local storage.
+         * 
+         */
         dispatch({type: `${loggedOut}`})
     }
 
